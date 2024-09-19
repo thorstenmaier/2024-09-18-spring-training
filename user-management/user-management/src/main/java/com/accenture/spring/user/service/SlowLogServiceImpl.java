@@ -7,7 +7,7 @@ public class SlowLogServiceImpl implements LogService {
     @Override
     public void log(String message) {
         try {
-            Thread.sleep(5000);
+            Thread.sleep(50);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }

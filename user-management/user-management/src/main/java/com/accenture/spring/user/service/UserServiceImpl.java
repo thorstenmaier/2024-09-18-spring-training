@@ -9,7 +9,7 @@ import java.util.List;
 @Component
 public class UserServiceImpl implements UserService {
 
-    @Autowired
+    @MyAutowired
     private LogService logService;
 
     public List<User> getAllUsers() {
