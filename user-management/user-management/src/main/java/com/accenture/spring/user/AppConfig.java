@@ -7,12 +7,12 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public  class AppConfig {
-    @Bean
+//    @Bean
     public UserService userServiceImpl() {
         return new UserServiceImpl();
     }
 
-    @Bean
+//    @Bean
     public ServiceClient serviceClient() {
         return new ServiceClient(userServiceImpl());
     }
