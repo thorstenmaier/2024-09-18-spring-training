@@ -1,6 +1,8 @@
 package com.accenture.spring.user.domain;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 
 @Entity
 @Table(name = "users")
@@ -10,7 +12,11 @@ public class User {
     @GeneratedValue
     private Long id;
 
+    @NotNull
+    @Size(min = 2, max = 255)
     private String firstname;
+
+    @NotNull
     @Column(unique = true)
     private String lastname;
 
@@ -24,6 +30,14 @@ public class User {
 
     public String getFirstname() {
         return firstname;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public void setFirstname(String firstname) {
