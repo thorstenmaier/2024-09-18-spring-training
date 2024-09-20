@@ -1,9 +1,6 @@
 package com.accenture.spring.user.domain;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "users")
@@ -14,6 +11,7 @@ public class User {
     private Long id;
 
     private String firstname;
+    @Column(unique = true)
     private String lastname;
 
     public User() {
